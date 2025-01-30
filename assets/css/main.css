@@ -1676,7 +1676,7 @@ input, select, textarea {
     padding-left: 10%;
 }
 .inner {
-    max-width: 750px; /* Increased width for better paragraph length */
+    max-width: 750px;
 }
 .intro-text {
     margin-bottom: 10px;
@@ -1695,40 +1695,44 @@ input, select, textarea {
     text-align: center;
     margin-bottom: 20px;
     font-size: 18px;
-    color: #6c5ce7;
+    color: #333;
 }
 
-/* Timeline Styling (No Background Cards, Different Bullet Colors) */
+/* Timeline Styling (Two-Sided, No Bullets, Custom Colors) */
 .timeline {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-left: 20px;
-    padding-left: 20px;
-    border-left: 3px solid #6c5ce7;
+    padding-left: 0;
+    margin: 20px auto;
+    max-width: 800px;
 }
 .timeline-item {
     position: relative;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    background: none;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 45%;
 }
-.timeline-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    position: absolute;
-    left: -25px;
-    top: 15px;
+.timeline-item.professional {
+    align-self: flex-start;
+    border-left: 4px solid #000;
 }
-.professional .timeline-dot {
-    background: #6c5ce7; /* Professional bullet color */
+.timeline-item.part-time {
+    align-self: flex-end;
+    border-right: 4px solid #555;
 }
-.part-time .timeline-dot {
-    background: #ff6b6b; /* Part-time bullet color */
+.timeline-item h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.timeline-item p {
+    font-size: 16px;
+    color: #666;
 }
 
-/* Skills Section - Interactive Without Background */
+/* Skills Section - Fix Clickable Toggle */
 .skills {
     margin-top: 20px;
 }
@@ -1737,21 +1741,23 @@ input, select, textarea {
     cursor: pointer;
     padding: 8px 12px;
     border-radius: 5px;
-    color: #6c5ce7;
-    border: 2px solid #6c5ce7;
+    color: #333;
+    border: 2px solid #333;
     display: inline-block;
     transition: color 0.3s, border 0.3s;
 }
 .skill-category:hover {
-    color: #4834d4;
-    border-color: #4834d4;
+    color: #555;
+    border-color: #555;
 }
 .skill-list {
     display: none;
     padding: 10px;
     margin-left: 10px;
 }
+.skill-list.active {
+    display: block;
+}
 .skill-list p {
     margin: 5px 0;
 }
-
