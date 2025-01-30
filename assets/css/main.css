@@ -1712,16 +1712,24 @@ input, select, textarea {
     align-items: center;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    background-color: white; /* 박스 배경색 하얀색 */
     padding: 10px;
 }
 
-.work-item img {
-    height: 200px; /* 이미지 높이 고정 */
-    width: auto; /* 가로 자동 */
-    max-width: 100%; /* 부모 요소보다 커지지 않도록 제한 */
-    object-fit: contain; /* 원본 비율 유지하면서 남는 부분을 배경색으로 채움 */
-    background-color: white; /* 남는 부분을 하얀색 처리 */
+.image-box {
+    width: 100%; /* 부모 요소 너비에 맞춤 */
+    height: 200px; /* 모든 이미지 박스 높이 동일하게 유지 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* 이미지가 들어가는 박스만 하얀색 */
+    overflow: hidden; /* 넘치는 이미지 숨김 */
+}
+.image-box img {
+    max-width: 100%; /* 가로 크기 자동 조정 */
+    max-height: 100%; /* 높이도 박스 크기보다 커지지 않도록 */
+    width: auto; /* 비율 유지 */
+    height: auto; /* 비율 유지 */
+    object-fit: contain; /* 이미지 비율 유지하면서 남는 공간을 배경색으로 */
 }
 .work-item h3 {
     margin-top: 10px;
