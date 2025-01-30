@@ -93,24 +93,34 @@
 						<article id="work">
 						    <h2 class="major">Work</h2>
 						    <p>Here are some of my featured projects showcasing data analysis and technical skills.</p>
-						    
+						
 						    <div class="work-container">
 						        <!-- Project 1 -->
-						        <div class="work-item" onclick="openProjectModal('Project Title 1', 'Description of project 1.')">
-							    <div class="image-box">
-							        <img src="images/project1.png" alt="">
-							    </div>
-							    <h3>Conflict Analytics Lab</h3>
-							</div>
+						        <div class="work-item" onclick="openProjectModal('Conflict Analytics Lab', 'This project involved using AI to analyze legal cases and predict outcomes.')">
+						            <div class="image-box">
+						                <img src="images/project1.png" alt="">
+						            </div>
+						            <h3>Conflict Analytics Lab</h3>
+						        </div>
 						
 						        <!-- Project 2 -->
-						        <div class="work-item" onclick="openProjectModal('Project Title 2', 'Description of project 2.')">
-							    <div class="image-box">
-							        <img src="images/project2.png" alt="">
-							    </div>
-							    <h3>Prediction of Disease Cases</h3>
-							</div>
+						        <div class="work-item" onclick="openProjectModal('Prediction of Disease Cases', 'This project analyzes and predicts disease cases using data from multiple regions.')">
+						            <div class="image-box">
+						                <img src="images/project2.png" alt="">
+						            </div>
+						            <h3>Prediction of Disease Cases</h3>
+						        </div>
 						    </div>
+						</article>
+						
+						<!-- 🔥 새로운 `main`이 프로젝트 클릭 시 활성화됨 -->
+						<div id="main">
+						    <article id="projectModal">
+						        <span class="close" onclick="closeProjectModal()"></span>
+						        <h2 id="modalTitle"></h2>
+						        <p id="modalDescription"></p>
+						    </article>
+						</div>
 						
 						<div class="more-projects" style="text-align: center; margin-top: 20px;">
 						    <a href="https://github.com/18ZL107" target="_blank">More Projects</a>
