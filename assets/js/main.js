@@ -443,22 +443,5 @@ filterButtons.forEach(button => {
     });
 });
 
-// Modal Functionality
-function openProjectModal(title, description) {
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalDescription').innerText = description;
-        document.getElementById('projectModal').style.display = "flex";
-    }
 
-    function closeProjectModal() {
-        document.getElementById('projectModal').style.display = "none";
-    }
-
-    // 모달 바깥을 클릭하면 닫기
-    window.onclick = function(event) {
-        var modal = document.getElementById('projectModal');
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    };
 })(jQuery);
