@@ -445,14 +445,20 @@ filterButtons.forEach(button => {
 
 // Modal Functionality
 function openProjectModal(title, description) {
-    document.getElementById("modal-title").textContent = title;
-    document.getElementById("modal-description").textContent = description;
-    document.getElementById("project-modal").style.display = "flex";
-}
-function closeProjectModal() {
-    document.getElementById("project-modal").style.display = "none";
-}
-document.querySelector(".close").addEventListener("click", closeProjectModal);
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalDescription').innerText = description;
+        document.getElementById('projectModal').style.display = "flex";
+    }
 
+    function closeProjectModal() {
+        document.getElementById('projectModal').style.display = "none";
+    }
 
+    // 모달 바깥을 클릭하면 닫기
+    window.onclick = function(event) {
+        var modal = document.getElementById('projectModal');
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
 })(jQuery);
