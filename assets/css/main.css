@@ -1672,7 +1672,6 @@ input, select, textarea {
     justify-content: flex-start;
     align-items: center;
     text-align: left;
-    height: 100vh;
     padding-left: 10%;
 }
 .inner {
@@ -1698,6 +1697,26 @@ input, select, textarea {
     justify-content: center;
     flex-wrap: wrap;
 }
+.work-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.work-item {
+    width: 333px; /* 可以根据需要调整尺寸 */
+    height: 250px;
+    overflow: hidden; /* 防止内容溢出 */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 可选，给元素添加阴影 */
+}
+
+.work-item img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
 
 /* Timeline Styling (Centered Timeline, Experiences on Both Sides) */
 .timeline {
