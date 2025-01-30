@@ -1704,7 +1704,7 @@ input, select, textarea {
 }
 
 .work-item {
-    width: 333px; /* 可以根据需要调整尺寸 */
+    width: 200px; /* 可以根据需要调整尺寸 */
     height: 150px;
     overflow: hidden; /* 防止内容溢出 */
     position: relative;
@@ -1754,31 +1754,3 @@ input, select, textarea {
     align-self: flex-end;
     padding-left: 30px;
 }
-
-/* Skills Section - Fix Clickable Toggle */
-.skills {
-    margin-top: 20px;
-}
-.skill-category {
-    font-weight: bold;
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 5px;
-    border: 2px solid #fff;
-    display: inline-block;
-    transition: color 0.3s, border 0.3s;
-}
-.skill-category:hover {
-    color: #ddd;
-    border-color: #ddd;
-}
-.skill-list {
-    display: none;
-    padding: 10px;
-    margin-left: 10px;
-    color: #fff;
-}
-.skill-list p {
-    margin: 5px 0;
-}
-
