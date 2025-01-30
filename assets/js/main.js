@@ -442,3 +442,17 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+// Modal Functionality
+function openProjectModal(title, description) {
+    document.getElementById("modal-title").textContent = title;
+    document.getElementById("modal-description").textContent = description;
+    document.getElementById("project-modal").style.display = "flex";
+}
+function closeProjectModal() {
+    document.getElementById("project-modal").style.display = "none";
+}
+document.querySelector(".close").addEventListener("click", closeProjectModal);
+
+
+})(jQuery);
