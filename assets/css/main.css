@@ -1712,12 +1712,11 @@ input, select, textarea {
     align-items: center; /* 내부 요소 중앙 정렬 */
     text-align: center; /* 텍스트 중앙 정렬 */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 그림자 효과 */
-    padding-bottom: 10px; /* 텍스트와 아래 공간 확보 */
 }
 
 .work-item img {
     width: 100%;
-    height: auto; /* 이미지 비율 유지하면서 조정 */
+    height: 200px; /* 이미지 비율 유지하면서 조정 */
     object-fit: cover;
 }
 
@@ -1725,7 +1724,7 @@ input, select, textarea {
     margin-top: 10px;
     font-size: 1rem;
     font-weight: bold;
-    padding: 0 10px; /* 가독성을 위한 패딩 */
+    margin-bottom: 10px
     word-break: break-word; /* 긴 단어가 줄바꿈 되도록 설정 */
 }
 
