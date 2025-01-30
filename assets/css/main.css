@@ -1704,8 +1704,8 @@ input, select, textarea {
 }
 
 .work-item {
-    width: 200px; /* 可以根据需要调整尺寸 */
-    height: 150px;
+    width: 300px; /* 可以根据需要调整尺寸 */
+    height: 100px;
     overflow: hidden; /* 防止内容溢出 */
     position: relative;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 可选，给元素添加阴影 */
