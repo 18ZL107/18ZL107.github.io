@@ -442,29 +442,3 @@ filterButtons.forEach(button => {
         });
     });
 });
-// 프로젝트 모달 열기
-function openProjectModal(title, description) {
-    var $article = $("#projectModal"); // 모달을 담는 article
-    var $modalTitle = $("#modalTitle"); // 제목 요소
-    var $modalDescription = $("#modalDescription"); // 설명 요소
-
-    if (!$article.length || !$modalTitle.length || !$modalDescription.length) {
-        console.error("❌ 모달 요소를 찾을 수 없음!");
-        return;
-    }
-
-    // 제목과 설명 업데이트
-    $modalTitle.text(title);
-    $modalDescription.text(description);
-
-    // 기존 _show() 메서드를 사용하여 모달 열기
-    $main._show("projectModal");
-}
-
-// 프로젝트 모달 닫기
-function closeProjectModal() {
-    // 기존 _hide() 메서드를 사용하여 모달 닫기
-    $main._hide();
-}
-
-})(jQuery);
