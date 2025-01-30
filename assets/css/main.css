@@ -1676,14 +1676,14 @@ input, select, textarea {
     padding-left: 10%;
 }
 .inner {
-    max-width: 750px;
+    max-width: 1000px;
 }
 .intro-text {
     margin-bottom: 10px;
     line-height: 1.6;
 }
 
-/* Work Section - Remove Filters */
+/* Work Section - Remove Filters & Keep Intro Text in One Line */
 .work-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1695,41 +1695,56 @@ input, select, textarea {
     text-align: center;
     margin-bottom: 20px;
     font-size: 18px;
-    color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* Timeline Styling (Two-Sided, No Bullets, Custom Colors) */
+/* Timeline Styling (Centered Timeline, Experiences on Both Sides) */
 .timeline {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-left: 0;
-    margin: 20px auto;
     max-width: 800px;
+    margin: 20px auto;
+    padding: 0;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: #fff;
+    height: 100%;
+    transform: translateX(-50%);
 }
 .timeline-item {
     position: relative;
+    width: 50%;
     padding: 15px;
     margin-bottom: 20px;
-    width: 45%;
-}
-.timeline-item.professional {
-    align-self: flex-start;
-    border-left: 4px solid #000;
-}
-.timeline-item.part-time {
-    align-self: flex-end;
-    border-right: 4px solid #555;
+    color: #fff;
 }
 .timeline-item h4 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
 .timeline-item p {
     font-size: 16px;
-    color: #666;
+    color: #ccc;
+}
+.timeline-item:nth-child(odd) {
+    text-align: right;
+    align-self: flex-start;
+    padding-right: 30px;
+}
+.timeline-item:nth-child(even) {
+    text-align: left;
+    align-self: flex-end;
+    padding-left: 30px;
 }
 
 /* Skills Section - Fix Clickable Toggle */
@@ -1741,19 +1756,20 @@ input, select, textarea {
     cursor: pointer;
     padding: 8px 12px;
     border-radius: 5px;
-    color: #333;
-    border: 2px solid #333;
+    color: #fff;
+    border: 2px solid #fff;
     display: inline-block;
     transition: color 0.3s, border 0.3s;
 }
 .skill-category:hover {
-    color: #555;
-    border-color: #555;
+    color: #ddd;
+    border-color: #ddd;
 }
 .skill-list {
     display: none;
     padding: 10px;
     margin-left: 10px;
+    color: #fff;
 }
 .skill-list.active {
     display: block;
@@ -1761,3 +1777,4 @@ input, select, textarea {
 .skill-list p {
     margin: 5px 0;
 }
+
