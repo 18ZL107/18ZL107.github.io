@@ -399,18 +399,7 @@
 					});
 
 
-		function filterCategory(category) {
-		    // 获取所有的工作项目
-		    const items = document.querySelectorAll('.work-item');
-		    items.forEach(item => {
-		        // 判断每个项目的类别是否与选中的类别匹配
-		        if (item.classList.contains(category)) {
-		            item.style.display = 'block';
-		        } else {
-		            item.style.display = 'none';
-		        }
-		    });
-		}
+
 
 // Typing Effect for 'This is Alisa Liu'
 const text = "This is Alisa Liu";
@@ -428,22 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-// Modal Functionality
-function openProjectModal(title, description) {
-    document.getElementById("modal-title").textContent = title;
-    document.getElementById("modal-description").textContent = description;
-    document.getElementById("project-modal").style.display = "flex";
-}
-function closeProjectModal() {
-    document.getElementById("project-modal").style.display = "none";
-}
-document.querySelector(".close").addEventListener("click", closeProjectModal);
-
-
-
 	
-
 // Ensure all descriptions are hidden on page load
 document.querySelectorAll('.description').forEach(desc => {
     desc.style.display = "none";
