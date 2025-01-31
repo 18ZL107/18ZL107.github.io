@@ -1715,6 +1715,27 @@ input, select, textarea {
     padding: 10px;
 }
 
+.work-item .description {
+    display: none;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+/* When Expanded, Show Description */
+.work-item.expanded {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.work-item.expanded .description {
+    display: block;
+    opacity: 1;
+}
+
+
 .image-box {
     width: 100%; /* 부모 요소 너비에 맞춤 */
     height: 200px; /* 모든 이미지 박스 높이 동일하게 유지 */
