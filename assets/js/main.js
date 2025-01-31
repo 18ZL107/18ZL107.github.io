@@ -441,11 +441,31 @@ function closeProjectModal() {
 document.querySelector(".close").addEventListener("click", closeProjectModal);
 
 
+
+	
+
+// Ensure all descriptions are hidden on page load
+document.querySelectorAll('.description').forEach(desc => {
+    desc.style.display = "none";
+});
+
 // Function to Toggle Project Expansion
 document.querySelectorAll('.work-item').forEach(item => {
     item.addEventListener('click', function(event) {
         event.stopPropagation();
+
+        // Close any other open project
+        document.querySelectorAll('.work-item').forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('expanded');
+                otherItem.querySelector('.description').style.display = "none";
+            }
+        });
+
+        // Toggle clicked item
         this.classList.toggle('expanded');
+        let description = this.querySelector('.description');
+        description.style.display = this.classList.contains('expanded') ? "block" : "none";
     });
 });
 
@@ -454,6 +474,7 @@ document.addEventListener('click', function(event) {
     document.querySelectorAll('.work-item.expanded').forEach(item => {
         if (!item.contains(event.target)) {
             item.classList.remove('expanded');
+            item.querySelector('.description').style.display = "none";
         }
     });
 });
