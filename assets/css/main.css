@@ -1744,6 +1744,7 @@ input, select, textarea {
     font-size: 14px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    text-align: left;
 }
 /* When Expanded, Show Description */
 .work-item.expanded {
@@ -1754,6 +1755,7 @@ input, select, textarea {
 .work-item.expanded .description {
     display: block;
     opacity: 1;
+    text-align: left;
 }
 
 
