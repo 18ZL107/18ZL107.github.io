@@ -412,7 +412,7 @@
 		    });
 		}
 
-	// Typing Effect for 'This is Alisa Liu'
+// Typing Effect for 'This is Alisa Liu'
 const text = "This is Alisa Liu";
 let index = 0;
 function typeEffect() {
@@ -427,21 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
 });
 
-// Project Filtering
-const filterButtons = document.querySelectorAll(".filter-btn");
-const workItems = document.querySelectorAll(".work-item");
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const category = button.getAttribute("data-category");
-        workItems.forEach(item => {
-            if (category === "all" || item.getAttribute("data-category") === category) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
-            }
-        });
-    });
-});
+
 
 // Modal Functionality
 function openProjectModal(title, description) {
@@ -455,4 +441,22 @@ function closeProjectModal() {
 document.querySelector(".close").addEventListener("click", closeProjectModal);
 
 
+// Function to Toggle Project Expansion
+document.querySelectorAll('.work-item').forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.stopPropagation();
+        this.classList.toggle('expanded');
+    });
+});
+
+// Close Expanded Project by Clicking Outside
+document.addEventListener('click', function(event) {
+    document.querySelectorAll('.work-item.expanded').forEach(item => {
+        if (!item.contains(event.target)) {
+            item.classList.remove('expanded');
+        }
+    });
+});
+
+	
 })(jQuery);
